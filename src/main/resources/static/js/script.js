@@ -27,8 +27,8 @@ function connectionSuccess() {
     stompClient.subscribe('/topic/javainuse', onMessageReceived);
 
     stompClient.send("/app/chat.newUser", {}, JSON.stringify({
-        sender : name,
-        type : 'newUser'
+        sender: name,
+        type: 'newUser'
     }))
 
 }
@@ -38,13 +38,12 @@ function sendMessage(event) {
 
     if (messageContent && stompClient) {
         var chatMessage = {
-            sender : name,
-            content : document.querySelector('#chatMessage').value,
-            type : 'CHAT'
+            sender: name,
+            content: document.querySelector('#chatMessage').value,
+            type: 'CHAT'
         };
 
-        stompClient.send("/app/chat.sendMessage", {}, JSON
-            .stringify(chatMessage));
+        stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
         document.querySelector('#chatMessage').value = '';
     }
     event.preventDefault();

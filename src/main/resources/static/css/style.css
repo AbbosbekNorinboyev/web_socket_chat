@@ -88,10 +88,10 @@ button.accent {
 
 .welcome-page-container {
     background-color: royalblue;
-    width: 100%;
-    max-width: 500px;
+    width: 80%;
+    max-width: 1000px;
     display: inline-block;
-    margin-top: 42px;
+    margin: 40px;
     vertical-align: middle;
     position: relative;
     padding: 35px 55px 35px;
